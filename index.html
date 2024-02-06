@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Repositories Explorer</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="text-center mb-4">
+        <h1 class="display-4">GitHub Repositories Explorer</h1>
+        <p class="lead">Explore public repositories for any GitHub user.</p>
+      </div>
+
+      <div class="form-group">
+        <input
+          type="text"
+          id="username"
+          class="form-control"
+          placeholder="Enter GitHub username"
+          onkeypress="handleKeyPress(event)"
+        /><br />
+
+        <input
+          type="text"
+          id="searchInput"
+          class="form-control"
+          placeholder="Search repositories"
+          oninput="searchRepositories()"
+        /><br />
+
+        <label for="reposPerPage">Repositories per Page:</label>
+        <select
+          id="reposPerPage"
+          class="form-control"
+          onchange="updateRepositoriesPerPage()"
+        >
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+      <button class="btn btn-primary btn-lg" onclick="fetchAndDisplayUser()">
+        Fetch Repositories
+      </button>
+      <div id="loader" class="mt-3" style="display: none">
+        <div class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+
+      <div
+        id="error-message"
+        class="alert alert-danger mt-3"
+        role="alert"
+        style="display: none"
+      ></div>
+
+      <div id="userProfile" class="mt-4 mb-4">
+        <div id="userProfileInfo"></div>
+        <div id="userTechnologies" class="mt-3"></div>
+      </div>
+
+      <ul id="repositoryList" class="list-group mt-3"></ul>
+      <nav aria-label="Page navigation" class="mt-4">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <button
+              class="page-link"
+              onclick="prevPage()"
+              aria-label="Previous"
+            >
+              <span aria-hidden="true">&laquo; Prev</span>
+            </button>
+          </li>
+
+          <ul id="pageNumbers" class="page-list"></ul>
+          <li class="page-item">
+            <button class="page-link" onclick="nextPage()" aria-label="Next">
+              <span aria-hidden="true">Next &raquo;</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

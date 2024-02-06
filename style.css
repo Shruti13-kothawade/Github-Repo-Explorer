@@ -1,0 +1,215 @@
+body {
+    background-color: #f6f8fa;
+    color: #24292e;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control  {
+    width: 100px; 
+}
+
+
+h1 {
+    font-size: 32px;
+}
+
+.lead {
+    font-size: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #1d48b2;
+    border-color: #03d646;
+}
+
+.btn-primary:hover {
+    background-color: #03c724;
+    border-color: #03c724;
+}
+
+.alert-danger {
+    display: none;
+}
+
+.list-group-item {
+    border: 1px solid #e1e4e8;
+    margin: 5px 0;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.list-group-item a {
+    color: #03d63b;
+}
+
+.list-group-item a:hover {
+    text-decoration: underline;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.dark-mode {
+    background-color: #0d1117;
+    color: #090a0a;
+}
+
+.dark-mode .container {
+    background-color: #0d1117;
+    border: 1px solid #0f0f0f;
+}
+
+.card {
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out; 
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow on hover */
+}
+
+.card-tech {
+    font-style: italic;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Existing styles remain unchanged */
+
+/* Add the following animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Apply animations to specific elements */
+#userProfileInfo,
+#userTechnologies,
+#repositoryList {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.card,
+.pagination {
+    animation: slideIn 0.8s ease-in-out;
+}
+
+/* Add hover animation for buttons */
+.btn-primary:hover {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Add loader animation */
+#loader {
+    position: relative;
+}
+
+.spinner-border {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+/* Repository topics styles */
+.topics {
+    margin-top: 10px;
+}
+
+.topics .badge {
+    margin-right: 5px;
+    background-color: #0366d6; 
+    color: #fff; 
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* Card hover effect */
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Loader animation */
+#loader {
+    position: relative;
+}
+
+.spinner-border {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+/* Add this to your existing CSS file */
+
+/* Technologies (boxes) styles */
+.technologies {
+    margin-top: 10px;
+}
+
+.technologies .badge {
+    margin-right: 5px;
+    background-color: #28a745; /* Green color for technologies */
+    color: #fff; /* White text color */
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+
