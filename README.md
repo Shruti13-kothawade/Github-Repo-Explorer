@@ -1,4 +1,4 @@
-# GitHub-Repo-Explorer - https://shruti13-kothawade.github.io/Github-Repo-Explorer/
+# GitHub-Repo-Explorer -
 
 ## Overview
 Objective was to learn use of Github API and enhance my javascript skills. 
