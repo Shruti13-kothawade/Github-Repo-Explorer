@@ -1,5 +1,5 @@
 # GitHub-Repo-Explorer 
-#repository-explorerr.netlify.app
+(https://repository-explorerr.netlify.app/)
 
 ## Overview
 # Objective was to learn use of Github API and enhance my javascript skills. 
